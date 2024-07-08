@@ -1,2 +1,5 @@
+# to ignore any environment files
 *.env
+
+#ignore any other sensitive files
 secrets.txt
