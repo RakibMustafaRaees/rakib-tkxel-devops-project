@@ -20,11 +20,11 @@ jobs:
         
     - name: Terraform Init
       run: terraform init
-      working-directory: ./path/to/terraform/config
+      working-directory: ./github/workflows/terraform/config
     
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      working-directory: ./path/to/terraform/config
+      working-directory: ./github/workflows/terraform/config
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
