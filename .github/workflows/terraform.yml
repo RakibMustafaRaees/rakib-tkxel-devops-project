@@ -27,9 +27,7 @@ jobs:
         terraform_version: 1.3.0
         
     - name: Terraform Init
-      run: | 
-       cd terraform
-       terraform init
+      run: terraform init
       
     - name: Terraform Apply
       run: | 
