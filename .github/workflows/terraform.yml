@@ -1,20 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Terraform
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
-
 jobs:
-
   build:
     runs-on: ubuntu-latest
     
@@ -28,10 +20,11 @@ jobs:
         
     - name: Terraform Init
       run: terraform init
-      
+      working-directory: ./path/to/terraform/config
+    
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      
+      working-directory: ./path/to/terraform/config
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}# This is a basic workflow to help you get started with Actions
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
