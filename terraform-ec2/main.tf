@@ -85,9 +85,10 @@ resource "aws_security_group" "my_sg" {
 
 # Provision an EC2 instance
 resource "aws_instance" "my_instance" {
-  ami           = "ami-0c55b159cbfafe1f0" # Change to your desired AMI
+  ami           = "ami-0c503d55a14d7a5f0" # Change to your desired AMI
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.my_subnet.id
+  associate_public_ip_address = true
   security_groups = [aws_security_group.my_sg.name]
 
   tags = {
