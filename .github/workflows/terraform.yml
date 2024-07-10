@@ -17,6 +17,13 @@ jobs:
       uses: hashicorp/setup-terraform@v2
       with:
         terraform_version: 1.3.0
+
+    - name: Check Working Directory
+      run: |
+        echo "Current directory:"
+        pwd
+        echo "Listing contents:"
+        ls -l
         
     - name: Terraform Init
       run: terraform init
