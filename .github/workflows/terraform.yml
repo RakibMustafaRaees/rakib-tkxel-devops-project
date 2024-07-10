@@ -29,7 +29,7 @@ jobs:
         
     - name: Terraform Init
       run: terraform init
-      working-directory: terraform-ec2/main.tf
+      working-directory: https://github.com/RakibMustafaRaees/rakib-tkxel-devops-project.git
     
     - name: Terraform Apply
       run: terraform apply -auto-approve
