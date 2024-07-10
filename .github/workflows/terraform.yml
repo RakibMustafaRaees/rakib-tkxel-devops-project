@@ -29,9 +29,9 @@ jobs:
     - name: Terraform Init
       run: terraform init
       
-    - name: Terraform
+    - name: Terraform Apply
       run: |
-         cd Terraform Apply
+         cd Terraform
          terraform apply -auto-approve
       
       env:
